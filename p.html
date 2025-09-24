@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador para Baby Shower</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #f5f0ff 0%, #e6f0ff 100%);
+            color: #5a4a42;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .countdown-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            border: 2px solid #e8b4b8;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #5a4a42;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #e8b4b8;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .time-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .time-value {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #e8b4b8;
+            background: #f9f5ff;
+            border-radius: 10px;
+            padding: 15px 20px;
+            min-width: 100px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .time-label {
+            font-size: 1rem;
+            color: #5a4a42;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        .separator {
+            font-size: 3rem;
+            color: #e8b4b8;
+            align-self: center;
+            margin: 0 5px;
+            font-weight: bold;
+        }
+        
+        .event-info {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px dashed #e8b4b8;
+        }
+        
+        .event-info p {
+            margin: 8px 0;
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            color: #e8b4b8;
+            font-weight: 600;
+        }
+        
+        /* Animaciones */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .time-value {
+                font-size: 2.8rem;
+                min-width: 80px;
+                padding: 12px 15px;
+            }
+            
+            .separator {
+                font-size: 2.5rem;
+            }
+            
+            .countdown {
+                gap: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .countdown-container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            .time-value {
+                font-size: 2.2rem;
+                min-width: 70px;
+                padding: 10px 12px;
+            }
+            
+            .separator {
+                font-size: 2rem;
+            }
+            
+            .time-label {
+                font-size: 0.9rem;
+            }
+            
+            .event-info p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown-container">
+        <h1>Faltan para el Baby Shower</h1>
+        <p class="subtitle">¡No llegues tarde a esta cita tan especial!</p>
+        
+        <div class="countdown">
+            <div class="time-unit">
+                <div class="time-value" id="days">00</div>
+                <div class="time-label">Días</div>
+            </div>
+            
+            <div class="separator">:</div>
+            
+            <div class="time-unit">
+                <div class="time-value" id="hours">00</div>
+                <div class="time-label">Horas</div>
+            </div>
+            
+            <div class="separator">:</div>
+            
+            <div class="time-unit">
+                <div class="time-value" id="minutes">00</div>
+                <div class="time-label">Min</div>
+            </div>
+            
+            <div class="separator">:</div>
+            
+            <div class="time-unit">
+                <div class="time-value" id="seconds">00</div>
+                <div class="time-label">Seg</div>
+            </div>
+        </div>
+        
+        <div class="event-info">
+            <p>Fecha: <span class="highlight">10 de Octubre, 2025</span></p>
+            <p>Hora: <span class="highlight">5:00 PM</span></p>
+            <p class="pulse">¡Te esperamos!</p>
+        </div>
+    </div>
+
+    <script>
+        // Establecer la fecha del evento (10 de octubre de 2025 a las 5:00 PM)
+        const eventDate = new Date(2025, 9, 10, 17, 0, 0); // Meses en JS: 0=Enero, 9=Octubre
+        
+        function updateCountdown() {
+            const now = new Date();
+            const timeDifference = eventDate - now;
+            
+            if (timeDifference <= 0) {
+                // Si la fecha ya pasó
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                return;
+            }
+            
+            // Calcular días, horas, minutos y segundos
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+            
+            // Actualizar los elementos del DOM
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        // Actualizar el contador cada segundo
+        setInterval(updateCountdown, 1000);
+        
+        // Ejecutar una vez al cargar la página
+        updateCountdown();
+    </script>
+</body>
+</html>

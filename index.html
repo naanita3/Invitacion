@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Shower de Alicia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&display=swap');
+    </style>
+</head>
+<body>
+    <!-- Header con animación de entrada -->
+    <header>
+        
+        <div class="header-content">
+            
+            <div class="date-place" data-aos="zoom-in" data-aos-delay="600">
+                <h1 data-aos="fade-down" data-aos-delay="200">No llegues tarde a esta cita tan especial...</h1>
+                <p data-aos="fade-up" data-aos-delay="400">Porque muy pronto nacerá nuestra pequeña</p>
+                <p style="font-size: 4rem;">Alicia</p>
+                 <div class="countdown">
+                    <div class="time-unit">
+                        <div class="time-value" id="days">00</div>
+                        <div class="time-label">Días</div>
+                    </div>
+                    
+                    <div class="separator">:</div>
+                    
+                    <div class="time-unit">
+                        <div class="time-value" id="hours">00</div>
+                        <div class="time-label">Horas</div>
+                    </div>
+                    
+                    <div class="separator">:</div>
+                    
+                    <div class="time-unit">
+                        <div class="time-value" id="minutes">00</div>
+                        <div class="time-label">Min</div>
+                    </div>
+                    
+                    <div class="separator">:</div>
+                    
+                    <div class="time-unit">
+                        <div class="time-value" id="seconds">00</div>
+                        <div class="time-label">Seg</div>
+                    </div>
+                </div>
+                <h2>10 de octubre, 2025</h2>
+                <p>5:00 PM</p>
+                <audio src="assets/audio/alice1.mp3" controls autoplay></audio>
+                <a href="#about"><img src="assets/img/3b515caf406675330e25537054ec14c1-removebg-preview.png" class="teap"></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sobre el evento -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Sobre el Evento</h2>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p>Te invitamos a un mágico Baby Shower donde celebraremos la llegada de nuestra princesita.</p>
+                    <p>Ven con tu mejor sonrisa y acompáñanos en esta aventura de amor, ternura y mucha ilusión.</p>
+                    <p>“Cada bebé es un pequeño milagro que abre la puerta a un mundo de maravillas”</p>
+                </div>
+                
+                <div class="about-image" data-aos="fade-left">
+                    <!-- Imagen decorativa -->
+                    <div class="aboutalice">
+                        <img src="assets/img/alicebb.jpeg" style="height: 30rem; width: auto;">
+                    </div>
+                </div>
+            </div>
+            <a href="#details"><img src="assets/img/thisway.png" alt="" class="teap2"></a>
+        </div>
+    </section>
+
+    <!-- Detalles del evento -->
+    <section id="details" style="background-color: var(--vintage-pink);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Detalles del Evento</h2>
+            
+            <div class="details-grid">
+                <div class="detail-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="detail-icon"><a href="https://maps.app.goo.gl/rHfzyFkoNgiR2BBeA"><img src="assets/img/clickme.png" alt=""></a></div>
+                    <h3>Ubicación</h3>
+                    <p> Quinta Jr Calle canada 2223 col. Rincón de la Sierra<br>Guadalupe, Mexico</p>
+                </div>
+                
+                <div class="detail-card" data-aos="flip-left" data-aos-delay="400">
+                    <div class="detail-icon"><a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Mi+Evento&dates=20251010T170000/20251010T190000&details=Descripción+del+evento&location=Ubicación+del+evento" 
+target="_blank" rel="noopener"><img src="assets/img/relojsinbg.png" alt=""></div></a>
+                    <h3>Fecha y Hora</h3>
+                    <p>Viernes, 10 de Octubre 2025<br>5:00 PM</p>
+                </div>
+                
+                <div class="detail-card" data-aos="flip-left" data-aos-delay="800">
+                    <div class="detail-icon"><a href="#confirmation"><img src="assets/img/alicesibg.png" alt=""></div></a>
+                    <h3>Confirmación</h3>
+                    <p>Confirma tu asistencia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ideas de regalos -->
+    <section id="gifts" class="gift-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">¡Lluvia de Regalos!</h2>
+            
+            <div class="gift-ideas">
+                <div class="gift-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="assets/img/regalo.png" style="height: 5rem; width: auto;">
+                </div>
+            </div>
+            
+            <p style="text-align:center; margin-top:2rem;" data-aos="fade-up">Tu presencia es el mejor regalo, pero si deseas obsequiar algo será de mucha ayuda.</p>
+        </div>
+    </section>
+
+    <!-- Confirmación de asistencia -->
+    <section id="confirmation">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Confirma tu Asistencia</h2>
+            
+            <div class="confirmation-form" data-aos="zoom-in">
+                <form id="rsvpForm">
+                    <div class="form-group">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guests">Número de acompañantes</label>
+                        <select id="guests" required>
+                            <option value="0">Solo yo</option>
+                            <option value="1">1 acompañante</option>
+                            <option value="2">2 acompañantes</option>
+                            <option value="3">3 acompañantes</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensaje para los futuros padres (opcional)</label>
+                        <input type="text" id="message" placeholder="Escribe un mensaje especial...">
+                    </div>
+                    
+                    <button type="submit" class="btn">Confirmar Asistencia</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Con mucho <span class="heart">❤</span> - ¡Te esperamos en este evento mágico!</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
