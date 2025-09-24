@@ -57,14 +57,14 @@
                 }
                 
                 if (message) {
-                    whatsappMessage += ` Mensaje: ${message}`;
+                    whatsappMessage += ` Y ${message}`;
                 }
                 
                 // Codificar el mensaje para URL
                 const encodedMessage = encodeURIComponent(whatsappMessage);
                 
                 // Número de teléfono (reemplaza con el número real)
-                const phoneNumber = "528147937167";
+                const phoneNumber = "528132656684";
                 
                 // Crear enlace de WhatsApp
                 const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
