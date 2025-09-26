@@ -374,6 +374,10 @@ section {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+.conejo{
+  height: 8rem;
+} 
+
 .form-group {
   margin-bottom: 1.5rem;
 }
